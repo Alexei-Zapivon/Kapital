@@ -6,18 +6,22 @@
 }
 
 .stat {
-    height: 50px;
+    height: 40px;
     width: 100%;
     display: inline-flex;
     margin: 20px;
     border: solid 1px;
     border-radius: 16px;
+    padding-top: 12px;
 }
 
 .stat div {
-    padding-top: 12px;
     padding-left: 20px;
     font-size: 20px;
+}
+
+.balance-info {
+    display: inline-flex;
 }
 
 .center {

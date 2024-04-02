@@ -9,20 +9,20 @@
 <body>
     <div class="center">
         <div class="stat">
-            <div>Баланс: 1000рублей</div>
+            <div class="balance-info">Баланс: <div id="balans"></div></div>
             <div>Это вам не игра, а жизнь....</div>
         </div>
-        <div class="block">
+        <div class="block" style="display: none">
             <img class="img-job" src="/src/assets/img/Buling.jpg">
             <div class="info">
                 <div class="progress-bar" id="progress"></div>
-                <div class="title-info">Нужно как-то выкручиваться</div>
-                <div>Моя прибыль в сек: 1000</div>
+                <div class="title-info">Работа на стройке</div>
+                <div>Прибыль в день: 300</div>
                 <button>Надрывать спину</button>
             </div>
         </div>
 
-        <div class="block">
+        <div class="block" style="display: none">
             <img class="img-job" src="/src/assets/img/sellman.jpg">
             <div class="info">
                 <div class="progress-bar"></div>
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="div-btn">
-            <button class="btn-buy">Устроиться на еще одну работу за 1000</button>
+            <button class="btn-buy" onclick="openNextBlock()">Дать взятку чтобы устроится: 1000</button>
         </div>
     </div>
     <script src="/src/assets/js/main.js"></script>
