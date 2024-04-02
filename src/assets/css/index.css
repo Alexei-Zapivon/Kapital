@@ -52,8 +52,7 @@
 
 .progress-bar {
     height: 20px;
-    width: 330px;
-    background-color: #ddd;
+    background-color: #29ac38;
 }
 
 .title-buy {
@@ -62,11 +61,11 @@
 }
 
 .btn-buy {
-    width: 100px;
+    width: 200px;
     font-size: 18px;
 }
 
-.span-btn {
-    width: 100px;
+.div-btn {
+    width: 200px;
     margin: auto;
 }
