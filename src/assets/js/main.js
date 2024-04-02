@@ -1,8 +1,10 @@
 var progressBar = document.getElementById('progress');
 var balans = document.getElementById('balans'); 
 var price = document.getElementById('price'); 
+var amounta = 300;
 
-// Функция для увеличения прогресса
+balans.innerHTML = amounta;
+
 function increaseProgress(progressBar) {
     var width = 0;
     var interval = setInterval(function() {
@@ -11,30 +13,34 @@ function increaseProgress(progressBar) {
         if (width >= 100) {
             clearInterval(interval);
             width = 0;
-            amounta += 1000;
+            amounta += gain[currentBlockIndex];
             balans.innerHTML = amounta;
             setTimeout(increaseProgress, 15, progressBar);
         }
     }, 15);
 }
-var amounta = 1000;
-var currentBlockIndex = 0;
-var jobPrice = [1000, 10000, 20000];
 
-balans.innerHTML = amounta;
+var jobPrice = [300, 1000, 12000, 16000, 20000];
+var gain = [0, 100, 300, 500, 700, 1300];
+var currentBlockIndex = 0;
 
 function openNextBlock() {
     var progressBarId = 'progress' + (currentBlockIndex + 1);
     var progressBar = document.getElementById(progressBarId);
     var blocks = document.querySelectorAll('.block');
+
+
     if (currentBlockIndex < blocks.length) {
         if (amounta >= jobPrice[currentBlockIndex]) {
-            amounta -= 1000;
+            amounta -= jobPrice[currentBlockIndex];
             balans.innerHTML = amounta;
             blocks[currentBlockIndex].style.display = "inline-flex";
             increaseProgress(progressBar);
+
+            var profit = blocks[currentBlockIndex].querySelector('.profit'); 
             currentBlockIndex++;
-            price.innerHTML = jobPrice[currentBlockIndex]; // Установка цены после увеличения индекса
+            profit.innerHTML = gain[currentBlockIndex]; 
+            price.innerHTML = jobPrice[currentBlockIndex];
         } else {
             alert("У вас не достаточно средств");
         }
@@ -42,3 +48,6 @@ function openNextBlock() {
 }
 
 price.innerHTML = jobPrice[currentBlockIndex];
+var profit = document.querySelector('.profit'); 
+profit.innerHTML = gain[currentBlockIndex];
+
