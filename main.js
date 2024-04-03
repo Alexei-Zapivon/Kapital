@@ -61,7 +61,7 @@ var descriptions = [
 
 function createBlock(blockNumber) {
     var imageName = imageNames[blockNumber % imageNames.length];
-    var imagePath = `/img/${imageName}`;
+    var imagePath = `img/${imageName}`;
     
     var block = `
     <div class="block block${blockNumber}">
