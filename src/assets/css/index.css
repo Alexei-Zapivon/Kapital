@@ -9,19 +9,33 @@
     height: 40px;
     width: 100%;
     display: inline-flex;
+    align-items: center;
     margin: 20px;
     border: solid 1px;
     border-radius: 16px;
-    padding-top: 12px;
+    padding: 10px;
 }
 
 .stat div {
-    padding-left: 20px;
+    padding-left: 12px;
     font-size: 20px;
 }
 
 .balance-info {
     display: inline-flex;
+}
+
+.balance-info div {
+    font-size: 24px;
+}
+
+.title-life {
+    padding-right: 12px;
+}
+
+.baf {
+    font-size: 20px;
+    height: 40px;
 }
 
 .center {
@@ -51,7 +65,17 @@
 }
 
 .title-info {
+    font-size: 20px;
     padding-top: 20px;
+}
+
+.profit-title {
+    font-size: 20px;
+}
+
+.button-clicker {
+    font-size: 20px;
+    padding: 4px;
 }
 
 .progress-bar {
