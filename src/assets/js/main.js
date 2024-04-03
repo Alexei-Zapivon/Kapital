@@ -3,7 +3,7 @@ var balansId = document.getElementById('balans');
 var price = document.getElementById('price'); 
 
 var blockIndex = 0;
-var balans = 12112300;
+var balans = 300;
 var klikerBuy = 10;
 
 var profits = 0;
