@@ -59,7 +59,8 @@
 }
 
 .info {
-    margin: 12px;
+    width: 100%;
+    margin: 16px;
     padding-left: 15px;
     margin-top: 20px;
 }

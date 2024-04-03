@@ -11,7 +11,7 @@ var priceNewBlock = [
     300, 1000, 2000,
     6000, 8000, 12000,
     20000, 40000, 100000,
-    1000000
+    1000000, 3000000
 ]
 
 balansId.innerHTML = balans;
@@ -101,7 +101,9 @@ function openNextBlock() {
         balansId.innerHTML = balans;
         blockIndex++; 
         price.innerHTML = priceNewBlock[blockIndex];
+
+        if (blockIndex >= priceNewBlock.length) {
+            alert('Поздравляем, вы выплатили все долги и завершили игру!');
+        }
     }
 }
-
-
